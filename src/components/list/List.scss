@@ -1,0 +1,149 @@
+.list{
+    width: 100%;
+    position: relative;
+    top: 60px;
+    background-color: #202125;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    &__arrow{
+        width: 40px;
+        position: fixed;
+        bottom: 100px;
+        right: 100px;
+        background-color: #cae962;
+        border-radius: 50px;
+        padding: 10px;
+        cursor: pointer;
+        transform: rotate(-90deg);
+        transition: 1s;
+        &:hover{
+            color: #e5f6b0;
+            transform: translateY(10px) scale(1.05) rotate(-90deg);
+            transition: 0.4s;
+            
+        }
+    }
+    &__active{
+        bottom: 1000px;
+        transition: 1s;
+    }
+    &__container{
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    &__inner{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #202125;
+    }
+    &__title{
+        margin: 0;
+        margin-bottom: 70px;
+        margin-top: 70px;
+        color: #ffffff;
+        font-size: 52px;
+    }
+    &__cards{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__card{
+        width: 25%;
+        color: #cae962;
+        margin-bottom: 50px;
+        transition: 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:hover{
+            color: #e5f6b0;
+            transform: scale(1.05);
+            transition: 0.4s;
+        }
+    }
+    &__card-img{
+        width: 90%;
+        height: 300px;
+        cursor: pointer;
+    }
+    &__card-content{
+        display: inline;
+        cursor: pointer;
+        padding: 10px 0 0px 15px;
+    }
+    &__card-title{
+        width: 93%;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    &__card-episodes{
+        color: rgb(233, 233, 233);
+    }
+}
+
+.loading{
+    font-size: 40px;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1050px) {
+    .list{
+        &__container{
+            max-width: 800px;
+        }
+        &__arrow{
+            bottom: 50px;
+            right: 50px;
+        }
+        &__title{
+            font-size: 44px;
+            margin: 50px 0;
+        }
+        &__card{
+            width: 33%;
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .list{
+        &__container{
+            max-width: 500px;
+        }
+        &__card{
+            width: 50%;
+        }
+        &__card-img{
+            width: 90%;
+            height: 300px;
+        }
+        &__card-title{
+            width: 93%;
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .list{
+        &__container{
+            max-width: 300px;
+        }
+        &__card{
+            width: 100%;
+        }
+        &__card-img{
+            width: 90%;
+            height: 300px;
+        }
+        &__card-title{
+            width: 93%;
+        }
+    }
+}

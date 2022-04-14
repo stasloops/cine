@@ -1,0 +1,27 @@
+.app{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #202125;
+    width: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+    z-index: 0;
+    position: relative;
+    &__back{
+        background-color: #2021257c;
+        width: 100%;
+        overflow: hidden;
+        min-height: 100vh;
+        z-index: 0;
+    }
+}
+
+.d{
+    z-index: 100;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+
