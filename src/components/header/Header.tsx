@@ -27,11 +27,11 @@ return (
     <div className='header__container'>
         <div className='header__inner'>
             <a className='header__logo' onClick={onNavigateLogo}>
-                <span className='fff'>Ani</span>JoJo
+                <span className='fff'>Ani</span>JoJo.aihan.bot
             </a>
             <form className='header__form'>
                 <input value={value} onChange={e => setValue(e.target.value)} placeholder='Поиск аниме' className='header__input'/>
-                <span onClick={onNavigateSearch} className='header__button'><img src='magnifier-left-svgrepo-com.svg'/></span>
+                <button onClick={onNavigateSearch} className='header__button'><img src='magnifier-left-svgrepo-com.svg'/></button>
             </form>
         </div>
     </div>
