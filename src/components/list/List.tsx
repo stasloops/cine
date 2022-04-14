@@ -43,7 +43,7 @@ const List:FC = () => {
 
   return (
     <main className='list'>
-      <img onClick={onScroll}style={{opacity: opacity === false ? '0' : '1'}}  className={active === false ? 'list__arrow' : 'list__arrow list__active'} src='arrow-svgrepo-com.svg' alt='scroll to top'/>
+      <img onClick={onScroll}style={{display: opacity === false ? 'none' : ''}}  className={active === false ? 'list__arrow' : 'list__arrow list__active'} src='arrow-svgrepo-com.svg' alt='scroll to top'/>
        <div className='list__container'>
           <div className='list__inner'>
             <h1 className='list__title'>Список аниме</h1>
