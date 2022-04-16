@@ -7,6 +7,7 @@ const List:FC = () => {
   const { loading, anime } = UseAppSelector(state => state.anime)
   const [active, setActive] = useState(false)
   const [opacity, setOpacity] = useState(false)
+  const [newAnime,setNewAnime] = useState<any[]>([])
 
   useEffect(() => {
     console.log(anime);
@@ -44,6 +45,14 @@ const List:FC = () => {
     }
   }
   
+  useEffect(():any => {
+    console.log(anime)
+   
+    let cityMap:any = new Map();
+    anime.forEach(p=> cityMap.set(p.worldart_link, p));
+    console.log([...cityMap.values()]);
+    setNewAnime([...cityMap.values()])
+  }, [anime])
 
   return (
     <main className='list'>
@@ -57,7 +66,7 @@ const List:FC = () => {
             :
             <div className='list__cards'>
               {
-            anime.map((item) => (
+            newAnime.map((item) => (
               <Link className='list__card' key={`${item.material_data.anime_title}_${item.id}`} to={`/anime/${item.material_data.title}/${item.id}`} >
                 <img className='list__card-img' src={item.material_data.poster_url} />
                 <div className='list__card-content'>

@@ -87,6 +87,11 @@
     }
     &__card-episodes{
         color: rgb(233, 233, 233);
+        text-decoration: underline;
+        margin-right: 10px;
+        &:last-child{
+            margin-right: 0px;
+        }
     }
 }
 
