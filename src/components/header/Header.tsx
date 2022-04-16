@@ -27,7 +27,7 @@ return (
     <div className='header__container'>
         <div className='header__inner'>
             <a className='header__logo' onClick={onNavigateLogo}>
-                <span className='fff'>Ani</span>JoJo.aihan.bot
+                <span className='fff'>Ani</span>JoJo
             </a>
             <form className='header__form'>
                 <input value={value} onChange={e => setValue(e.target.value)} placeholder='Поиск аниме' className='header__input'/>

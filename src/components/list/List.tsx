@@ -39,7 +39,7 @@ const List:FC = () => {
     else{
       setTimeout(() => {
         setOpacity(false)   
-      },250)
+      },1000)
       
     }
   }
