@@ -14,24 +14,3 @@ export const getAnime = (page: any) => {
         }
     }
 }
-
-
-
-// page.length === 0 ? `http://kodikapi.com/list?token=30ef128890b06e03700a3628b91c87c2&with_material_data=true&types=anime-serial&translation_id=609&sort=shikimori_rating&limit=48` : `${page}&with_material_data=true&types=anime-serial&translation_id=609&sort=shikimori_rating&limit=48`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

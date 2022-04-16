@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useAppDispatch, UseAppSelector } from '../../hooks/redux-hooks/redux'
+import { UseAppSelector } from '../../hooks/redux-hooks/redux'
 import './List.scss'
 
 const List:FC = () => {
@@ -46,8 +46,6 @@ const List:FC = () => {
   }
   
   useEffect(():any => {
-    console.log(anime)
-   
     let cityMap:any = new Map();
     anime.forEach(p=> cityMap.set(p.worldart_link, p));
     console.log([...cityMap.values()]);

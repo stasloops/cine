@@ -4,7 +4,11 @@ import { useAppDispatch } from '../../hooks/redux-hooks/redux'
 import { getSearchAnime } from '../../store/reducers/AnimeSearch/AnimeSearchGet'
 import './Header.scss'
 
-const Header:FC = () => {
+type HeaderProps = {
+    setValueSearch: (item: string) => void
+}
+
+const Header:FC<HeaderProps> = ({setValueSearch}) => {
     const dispatch = useAppDispatch()
     const [value, setValue] = useState<string>('')
     const navigate = useNavigate()
@@ -18,6 +22,7 @@ const Header:FC = () => {
             e.preventDefault()
             navigate('/search')
             dispatch(getSearchAnime(value))
+            setValueSearch(value)
             setValue('')
         }
     }

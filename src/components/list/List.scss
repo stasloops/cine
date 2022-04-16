@@ -45,10 +45,25 @@
     }
     &__title{
         margin: 0;
-        margin-bottom: 70px;
-        margin-top: 70px;
+        padding: 50px 0;
         color: #ffffff;
         font-size: 52px;
+    }
+    &__search{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 12px;
+        box-sizing: border-box;
+    }
+    &__result{
+        color: #ffffff;
+        font-size: 12px;
+        &-search{
+            color: #cae962;
+            font-size: 20px;
+        }
     }
     &__cards{
         width: 100%;
@@ -136,6 +151,17 @@
         }
         &__card-title{
             width: 93%;
+        }
+        &__search{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__result{
+            
+            &-search{
+                margin: 0;
+                margin-top: 30px;
+            }
         }
     }
 }

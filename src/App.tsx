@@ -10,6 +10,7 @@ import Search from './components/search/Search';
 
 const App = () => {
   const dispatch = useAppDispatch()
+  const [valueSearch, setValueSearch] = useState<string>('')
   const { page } = UseAppSelector(state => state.anime)
   const [fetching, setFetching] = useState(true)
 
@@ -39,11 +40,12 @@ const App = () => {
   return (
     <div className="app">
       <div className='app__back'>
-        <Header />
+        <Header setValueSearch={setValueSearch}/>
         <Routes>
           <Route path="/" element={<List />}/>
-          <Route path="/search" element={<Search />}/>
+          <Route path="/search" element={<Search valueSearch={valueSearch}/>}/>
           <Route path="/anime/:title/:id" element={<Anime />}/>
+          <Route path="*" element={<List />}/>
         </Routes>
         </div>
     </div>
