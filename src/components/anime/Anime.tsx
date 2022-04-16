@@ -45,6 +45,7 @@ if(searchAnime.length === 0){
                         <span className='anime__year'>Год: {searchAnime[0].year}</span>
                     </div>
                 </div>
+                <strong className='anime__video-title'>Смотреть аниме <span className='cae962'>«{searchAnime[0].material_data.title}»</span> онлайн</strong>
                 <iframe className='anime__video' src={searchAnime[0].link}
                         allow="autoplay; fullscreen"
                 ></iframe>
