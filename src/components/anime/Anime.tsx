@@ -31,21 +31,21 @@ if(searchAnime.length === 0){
     return null
 }else{
     return (<>
-    <img src={searchAnime[0].material_data.poster_url} className='anime__background'  />
+    <img src={searchAnime[0].material_data?.poster_url} className='anime__background'  />
     <div className='anime'>
         <div className='anime__container'>
             <div className='anime__inner'>
                 <div className='anime__info'>
-                    <img className='anime__img' src={searchAnime[0].material_data.poster_url}/>
+                    <img className='anime__img' src={searchAnime[0].material_data?.poster_url}/>
                     <div className='anime__content'>
-                        <h1 className='anime__title'>{searchAnime[0].material_data.title}</h1>
+                        <h1 className='anime__title'>{searchAnime[0].material_data?.title}</h1>
                         <span className='anime__episode'>{searchAnime[0].last_season} сезон </span>
                         <span className='anime__episode-green'>{searchAnime[0].last_episode} серий</span>
-                        <p className='anime__description'>{searchAnime[0].material_data.anime_description}</p>
+                        <p className='anime__description'>{searchAnime[0].material_data?.anime_description}</p>
                         <span className='anime__year'>Год: {searchAnime[0].year}</span>
                     </div>
                 </div>
-                <strong className='anime__video-title'>Смотреть аниме <span className='cae962'>«{searchAnime[0].material_data.title}»</span> онлайн</strong>
+                <strong className='anime__video-title'>Смотреть аниме <span className='cae962'>«{searchAnime[0].material_data?.title}»</span> онлайн</strong>
                 <iframe className='anime__video' src={searchAnime[0].link}
                         allow="autoplay; fullscreen"
                 ></iframe>

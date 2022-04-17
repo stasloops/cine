@@ -65,9 +65,9 @@ const List:FC = () => {
               {
             newAnime.map((item) => (
               <Link className='list__card' key={`${item.id}`} to={`/anime/${item.id}`} >
-                <img className='list__card-img' src={item.material_data.poster_url} />
+                <img className='list__card-img' src={item.material_data?.poster_url} />
                 <div className='list__card-content'>
-                  <h2 className='list__card-title'>{item.material_data.anime_title}</h2>
+                  <h2 className='list__card-title'>{item.material_data?.anime_title}</h2>
                   <span>
                     <span className='list__card-episodes'>{item.last_season} сезон </span>
                     <span className='list__card-episodes'>{item.last_episode} серии </span>
