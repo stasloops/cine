@@ -6,15 +6,10 @@ type SearchProps = {
   valueSearch: string
 }
 const Search:FC<SearchProps> = ({valueSearch}) => {
-const [newAnimeSearch,setNewAnimeSearch] = useState<any[]>([])
-const [filterAnimeSearch, setFilterAnimeSearch] = useState<any[]>([])
-const [number, setNumber] = useState<any>([])
-
-  const { animeSearch, loadingSearch } = UseAppSelector(state => state.animeSearch)
+const [newAnimeSearch,setNewAnimeSearch] = useState<any>([])
+const { animeSearch, loadingSearch } = UseAppSelector(state => state.animeSearch)
 
   useEffect(():any => {
-    console.log(animeSearch)
-   
     let cityMap:any = new Map();
     animeSearch.forEach(p=> cityMap.set(p.worldart_link, p));
     console.log([...cityMap.values()]);
@@ -38,11 +33,11 @@ const [number, setNumber] = useState<any>([])
             newAnimeSearch.length === 0 ?
             <h2 className='fff pad'>Попробуйте ввести название аниме по-другому. В случае, если вам все равно не удалось найти нужное вам аниме, напишите мне.</h2>
             :
-            newAnimeSearch.map((item: any) => (
-              <Link className='list__card' key={`${item.material_data.anime_title}_${item.id}`} to={`/anime/${item.material_data.title}/${item.id}`} >
-                <img className='list__card-img' src={item.material_data.poster_url} />
+            newAnimeSearch?.map((item: any) => (
+              <Link className='list__card' key={`${item.id}`} to={`/anime/${item.id}`} >
+                <img className='list__card-img' src={item.material_data?.poster_url} />
                 <div className='list__card-content'>
-                  <h2 className='list__card-title'>{item.material_data.anime_title}</h2>
+                  <h2 className='list__card-title'>{item.material_data?.anime_title}</h2>
                   <span className='list__card-episodes'>{item.last_season === undefined ? "" : item.last_season + " сезон"} </span>
                   <span className='list__card-episodes'>{item.type === "anime" ? "Фильм" : "TV Сериал"}</span>
                 </div>

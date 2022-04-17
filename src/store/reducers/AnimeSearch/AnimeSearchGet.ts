@@ -2,7 +2,7 @@ import { Dispatch } from "@reduxjs/toolkit";
 import axios from "axios";
 import { fetchAnime, fetchError, fetchLoading } from "./AnimeSearchSlice";
 
-export const getSearchAnime = (title: string) => {
+export const getSearchAnime = (title = '') => {
     return async (dispatch: Dispatch) =>{
         try{
             dispatch(fetchLoading())
@@ -10,6 +10,8 @@ export const getSearchAnime = (title: string) => {
             dispatch(fetchAnime(res.data.results))
         }catch(e){
             dispatch(fetchError(e))
+        }finally{
+            console.log(title);
         }
     }
 }

@@ -40,8 +40,7 @@ const List:FC = () => {
     else{
       setTimeout(() => {
         setOpacity(false)   
-      },1000)
-      
+      },1000)   
     }
   }
   
@@ -65,7 +64,7 @@ const List:FC = () => {
             <div className='list__cards'>
               {
             newAnime.map((item) => (
-              <Link className='list__card' key={`${item.material_data.anime_title}_${item.id}`} to={`/anime/${item.material_data.title}/${item.id}`} >
+              <Link className='list__card' key={`${item.id}`} to={`/anime/${item.id}`} >
                 <img className='list__card-img' src={item.material_data.poster_url} />
                 <div className='list__card-content'>
                   <h2 className='list__card-title'>{item.material_data.anime_title}</h2>

@@ -44,7 +44,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<List />}/>
           <Route path="/search" element={<Search valueSearch={valueSearch}/>}/>
-          <Route path="/anime/:title/:id" element={<Anime />}/>
+          <Route path="/anime/:id" element={<Anime />}/>
           <Route path="*" element={<List />}/>
         </Routes>
         </div>
