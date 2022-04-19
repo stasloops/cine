@@ -1,0 +1,46 @@
+export const filterDataGenres = [
+    { value: 'боевые искусства' },
+    { value: 'военное' },
+    { value: 'гарем' },
+    { value: 'экшен' },
+    { value: 'школа' },
+    { value: 'фэнтези' },
+    { value: 'демоны' },
+    { value: 'детектив' },
+    { value: 'драма' },
+    { value: 'игры' },
+    { value: 'исторический' },
+    { value: 'комедия' },
+    { value: 'космос' },
+    { value: 'меха' },
+    { value: 'музыка' },
+    { value: 'пародия' },
+    { value: 'повседневность' },
+    { value: 'приключения' },
+    { value: 'психологическое' },
+    { value: 'романтика' },
+    { value: 'самураи' },
+    { value: 'сверхъестественное' },
+    { value: 'спорт' },
+    { value: 'супер сила' },
+    { value: 'фантастика' },
+    { value: 'ужасы' },
+    { value: 'триллер' },
+    { value: 'сёнен' },
+    { value: 'сёдзё' },
+    { value: 'сэйнэн' },
+    { value: 'этти' },
+]
+
+export const filterDataType = [
+    { value: 'tv', label: 'TV сериал' },
+    { value: 'movie', label: 'Фильм' },
+    { value: 'ova', label: 'OVA' },
+    { value: 'special', label: 'Спешл' },
+]
+
+export const filterDataSort = [
+    { value: 'shikimori_rating', label: 'Рейтингу' },
+    { value: 'created_at', label: 'Дате добавления' },
+    { value: 'updated_at', label: 'Дате обновления' },
+]

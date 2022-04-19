@@ -7,7 +7,7 @@ const rootReducer = combineReducers({
     anime: AnimeSlice,
     animeSearch: AnimeSearchSlice,
     [pokemonApi.reducerPath]: pokemonApi.reducer
- })
+})
 
 export const setupStore = () => {
     return configureStore({

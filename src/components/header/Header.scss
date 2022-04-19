@@ -1,4 +1,4 @@
-.header{
+.header {
     z-index: 100;
     width: 100%;
     position: fixed;
@@ -7,35 +7,41 @@
     top: 0;
     border-bottom: 2px solid #cae962;
     font-family: 'Montserrat', sans-serif;
-    &__container{
+
+    &__container {
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
     }
-    &__inner{
+
+    &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 22px;
     }
-    &__logo{
+
+    &__logo {
         font-size: 28px;
         color: #cae962;
         cursor: pointer;
         font-weight: 400;
-        
+
     }
-    &__form{
+
+    &__form {
         display: flex;
         align-items: center;
     }
-    &__input{
+
+    &__input {
         border: none;
         border-radius: 20px;
         padding: 7px 0 7px 10px;
         width: calc(150px + 9vw);
     }
-    &__button{
+
+    &__button {
         border: none;
         border-radius: 50px;
         background-color: #cae962;
@@ -49,7 +55,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        &:hover{
+
+        &:hover {
             background-color: #e4fc98;
             transition: 0.5s;
             transform: scale(1.2);
@@ -60,24 +67,29 @@
 }
 
 @media screen and (max-width: 470px) {
-    .header{
+    .header {
         padding: 5px 0;
-        &__inner{
+
+        &__inner {
             padding: 0px 10px;
         }
-        &__logo{
+
+        &__logo {
             font-size: calc(10px + 4vw);
         }
-        &__form{
+
+        &__form {
             display: flex;
             justify-content: end;
         }
-        &__input{
+
+        &__input {
             width: 20%;
             transition: 0.4s;
             position: absolute;
             right: 50px;
-            &:focus{
+
+            &:focus {
                 width: 70%;
                 transition: 0.4s;
             }
@@ -85,6 +97,6 @@
     }
 }
 
-.fff{
+.fff {
     color: #fff;
 }

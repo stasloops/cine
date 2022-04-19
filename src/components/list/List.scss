@@ -1,11 +1,12 @@
-.list{
+.list {
     width: 100%;
     position: relative;
     top: 60px;
     background-color: #202125;
     min-height: 100vh;
     padding-bottom: 100px;
-    &__arrow{
+
+    &__arrow {
         width: 40px;
         position: fixed;
         bottom: 100px;
@@ -17,39 +18,39 @@
         transform: rotate(-90deg);
         transition: 1s;
         z-index: 100;
-        &:hover{
+
+        &:hover {
             color: #e5f6b0;
             transform: translateY(10px) scale(1.05) rotate(-90deg);
             transition: 0.4s;
-            
+
         }
     }
-    &__active{
-        bottom: 1000px;
-        transition: 1s;
-    }
-    &__container{
+
+    &__container {
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
     }
-    &__inner{
+
+    &__inner {
         box-sizing: border-box;
         width: 100%;
         padding: 0 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         background-color: #202125;
     }
-    &__title{
+
+    &__title {
         margin: 0;
-        padding: 50px 0;
-        color: #ffffff;
-        font-size: 52px;
+        padding: 50px 12px;
+        color: #cae962;
+        font-size: 42px;
     }
-    &__search{
+
+    &__search {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -57,20 +58,24 @@
         padding: 0px 12px;
         box-sizing: border-box;
     }
-    &__result{
+
+    &__result {
         color: #ffffff;
         font-size: 12px;
-        &-search{
+
+        &-search {
             color: #cae962;
             font-size: 20px;
         }
     }
-    &__cards{
+
+    &__cards {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
-    &__card{
+
+    &__card {
         width: 25%;
         color: #cae962;
         margin-bottom: 50px;
@@ -78,87 +83,103 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        &:hover{
+
+        &:hover {
             color: #e5f6b0;
             transform: scale(1.05);
             transition: 0.4s;
         }
     }
-    &__card-img{
+
+    &__card-img {
         width: 90%;
         height: 300px;
         cursor: pointer;
     }
-    &__card-content{
+
+    &__card-content {
         display: inline;
         cursor: pointer;
         padding: 10px 0 0px 15px;
     }
-    &__card-title{
+
+    &__card-title {
         width: 93%;
         font-weight: 400;
         margin: 0;
         margin-bottom: 10px;
+        font-size: 22px;
     }
-    &__card-episodes{
+
+    &__card-episodes {
         color: rgb(233, 233, 233);
         text-decoration: underline;
         margin-right: 10px;
-        &:last-child{
+
+        &:last-child {
             margin-right: 0px;
         }
     }
 }
 
-.loading{
+.loading {
     font-size: 40px;
     color: #ffffff;
 }
-.pad{
+
+.pad {
     padding: 0 10px;
 }
 
 @media screen and (max-width: 1050px) {
-    .list{
-        &__container{
+    .list {
+        &__container {
             max-width: 800px;
         }
-        &__arrow{
+
+        &__arrow {
             bottom: 50px;
             right: 50px;
         }
-        &__title{
+
+        &__title {
             font-size: 44px;
             margin: 50px 0;
         }
-        &__card{
+
+        &__card {
             width: 33%;
         }
     }
 }
 
 @media screen and (max-width: 840px) {
-    .list{
-        &__container{
+    .list {
+        &__container {
             max-width: 500px;
         }
-        &__card{
+
+        &__card {
             width: 50%;
         }
-        &__card-img{
+
+        &__card-img {
             width: 90%;
             height: 300px;
         }
-        &__card-title{
+
+        &__card-title {
             width: 93%;
         }
-        &__search{
+
+        &__search {
             flex-direction: column;
             align-items: flex-start;
         }
-        &__result{
-            
-            &-search{
+
+        &__result {
+
+            &-search {
                 margin: 0;
                 margin-top: 30px;
             }
@@ -167,21 +188,25 @@
 }
 
 @media screen and (max-width: 470px) {
-    .list{
-        &__title{
+    .list {
+        &__title {
             font-size: 9vw;
         }
-        &__inner{
+
+        &__inner {
             padding: 0;
         }
-        &__card-img{
+
+        &__card-img {
             width: 94%;
             height: 60vw;
-            &:hover{
+
+            &:hover {
                 transform: none;
             }
         }
-        &__card-title{
+
+        &__card-title {
             width: 93%;
             font-size: 20px;
         }

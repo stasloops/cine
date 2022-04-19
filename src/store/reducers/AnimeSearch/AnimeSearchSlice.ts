@@ -3,27 +3,27 @@ import { createSlice } from "@reduxjs/toolkit";
 type TypeInitialState = {
     animeSearch: any[],
     loadingSearch: boolean,
-    errorSearch: null,  
+    errorSearch: null,
 }
 
-const initialState:TypeInitialState = {
+const initialState: TypeInitialState = {
     animeSearch: [],
     loadingSearch: false,
-    errorSearch: null,  
+    errorSearch: null,
 }
 
 export const animeSearchSlice = createSlice({
     name: 'animeSearch',
     initialState,
     reducers: {
-        fetchLoading(state){
+        fetchLoading(state) {
             state.loadingSearch = true
         },
-        fetchAnime(state, action){
+        fetchAnime(state, action) {
             state.loadingSearch = false
             state.animeSearch = action.payload
         },
-        fetchError(state, action){
+        fetchError(state, action) {
             state.loadingSearch = false
             state.errorSearch = action.payload
         }
