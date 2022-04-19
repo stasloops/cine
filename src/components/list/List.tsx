@@ -29,11 +29,14 @@ const List: FC = () => {
     }
   }
 
-  useEffect((): any => {
-    let dataMap: any = new Map();
-    anime.forEach(p => dataMap.set(p.worldart_link, p));
+  useEffect(() => {
+    let dataMap:any = new Map();
+    anime.forEach((p:any) => dataMap.set(p.worldart_link, p));
     setNewAnime([...dataMap.values()])
+    
     console.log(anime);
+    console.log(newAnime);
+    
   }, [anime])
 
   return (

@@ -18,8 +18,8 @@ const Header: FC<HeaderProps> = ({ setValueSearch }) => {
     }
 
     const onNavigateSearch = (e: any) => {
+        e.preventDefault()
         if (value.length > 0) {
-            e.preventDefault()
             navigate('/search')
             dispatch(getSearchAnime(value))
             setValueSearch(value)

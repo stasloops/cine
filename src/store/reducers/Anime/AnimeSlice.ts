@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 type TypeInitialState = {
-    anime: any[],
+    anime: any,
     page: any,
     loading: boolean,
     error: null,

@@ -29,7 +29,7 @@ const App = () => {
   }, [])
 
   const scrollHandler = (e: any) => {
-    if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) <= 500) {
+    if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) <= 600) {
       setFetching(true)
       console.log('scroll');
     }

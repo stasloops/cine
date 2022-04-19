@@ -38,6 +38,7 @@
         background-color: #33353c;
         color: #cae962;
         font-weight: 700;
+        font-size: 14px;
         margin-right: 10px;
         margin-bottom: 20px;
         cursor: pointer;
@@ -97,6 +98,9 @@
         &__genre{
             height: 200px;
             overflow: auto;
+        }
+        &__sort{
+            min-height: 38px;
         }
     }
 }
