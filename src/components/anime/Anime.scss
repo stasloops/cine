@@ -77,11 +77,23 @@
         margin-bottom: 13px;
     }
 
-    &__episode {
-        &-green {
+    &__genres{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        &-item{
+            display: inline-block;
+            margin-left: 5px;
             color: #cae962;
         }
     }
+    &__b{
+        &:last-child{
+            display: none;
+        }
+    }
+    
 }
 
 .cae962 {
