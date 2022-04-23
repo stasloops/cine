@@ -14,7 +14,7 @@ const initialState: TypeInitialState = {
     loading: false,
     error: null,
     params: {
-        valueSort: 'shikimori_rating', valueGenres: '', valueType: 'tv'
+        valueSort: 'shikimori_rating', valueGenres: '', valueType: 'tv', valueYear: ''
     }
 }
 
