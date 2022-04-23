@@ -4,7 +4,7 @@
     top: 60px;
     background-color: #202125;
     min-height: 100vh;
-    padding-bottom: 100px;
+    padding-bottom: 100vh;
     &__arrow {
         width: 40px;
         position: fixed;
@@ -191,7 +191,8 @@
         &__title {
             font-size: 9vw;
             padding: 25px 12px;
-            padding-top: 0px;
+            margin: 8px 0;
+            padding-top: 10px;
         }
 
         &__inner {
