@@ -4,17 +4,13 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const Anime: FC = () => {
-    const [searchAnime, setSearchAnime] = useState<any>([])
+    const [searchAnime, setSearchAnime] = useState<any[]>([])
+    const { id } = useParams<string>()
 
-    const { id } = useParams()
-
-    useEffect((): any => {
-        console.log(id);
+    useEffect(() => {
         const getAnime = async () => {
             try {
                 const res = await axios.get(`https://kodikapi.com/search?token=30ef128890b06e03700a3628b91c87c2&id=${id}&with_material_data=true`)
-                console.log(res.data);
-
                 setSearchAnime(res.data.results)
             } catch (e) {
                 console.log(e);
@@ -36,7 +32,7 @@ const Anime: FC = () => {
                 <div className='anime__container'>
                     <div className='anime__inner'>
                         <div className='anime__info'>
-                            <img className='anime__img' src={searchAnime[0].material_data?.poster_url} />
+                            <img className='anime__img' src={searchAnime[0].material_data?.poster_url} alt='anime poster'/>
                             <div className='anime__content'>
                                 <h1 className='anime__title'>{searchAnime[0].material_data?.title}</h1>
                                 <p className='anime__description'>{searchAnime[0].material_data?.anime_description}</p>

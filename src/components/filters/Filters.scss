@@ -18,17 +18,30 @@
 
     &__genres {
         display: flex;
+        flex-wrap: wrap;
 
         &-title {
             margin: 0;
             margin-left: 5px;
             margin-bottom: 10px;
         }
+
+        &-content {
+            width: 60%;
+        }
     }
 
     &__left {
         width: 40%;
+        height: 100px;
         display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-item {
+            width: 50%;
+
+        }
     }
 
     &__sort {
@@ -79,28 +92,56 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .filters{
-        &__genres{
-            display: inline-block;
+    .filters {
+        &__genres {
+            display: inline;
         }
-        &__left{
+
+        &__left {
             width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            position: relative;
+            flex-wrap: nowrap;
+            padding: 0 300px 0 0;
+
+            &-item {
+                display: inline;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .filters {
+        &__left {
+            padding: 0;
         }
     }
 }
 
 @media screen and (max-width: 520px) {
-    .filters{
+    .filters {
         padding: 0 5px;
-        &__inner{
+
+        &__inner {
             padding: 20px 20px;
         }
-        &__genre{
+
+        &__genre {
             height: 200px;
             overflow: auto;
         }
-        &__sort{
+
+        &__sort {
             font-size: 16px;
         }
+
+        &__left {
+            height: 100%;
+            display: inline-block;
+        }
+
     }
 }

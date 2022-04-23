@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import { setupStore } from './store';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-
 const store = setupStore()
 
 ReactDOM.render(

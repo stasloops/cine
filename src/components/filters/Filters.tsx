@@ -3,15 +3,15 @@ import './Filters.scss'
 import { useAppDispatch } from '../../hooks/redux-hooks/redux'
 import { getAnime } from '../../store/reducers/Anime/AnimeGet'
 import { fetchPage, getParams, resetAnime } from '../../store/reducers/Anime/AnimeSlice'
-import { filterDataGenres, filterDataType, filterDataSort } from './filter-data'
+import { filterDataGenres, filterDataType, filterDataSort, filterDataYear } from './filter-data'
 import Genre from '../genre/Genre'
 
 
 const Filters: FC = () => {
     const dispatch = useAppDispatch()
-    const [value, setValue] = useState<any>({ valueSort: 'shikimori_rating', valueGenres: '', valueType: 'tv' })
-    const [genre, setGenre] = useState<any>('')
-    const [activeGenre, setActiveGenre] = useState<any>([])
+    const [value, setValue] = useState<any>({ valueSort: 'shikimori_rating', valueGenres: '', valueType: 'tv', valueYear: '' })
+    const [genre, setGenre] = useState<string>('')
+    const [activeGenre, setActiveGenre] = useState<any[]>([])
 
     const handleGenre = (gen: any) => {
         const index = activeGenre.findIndex((ele: any) => ele === gen)
@@ -23,7 +23,7 @@ const Filters: FC = () => {
             setGenre(activeGenre.join(','))
         }
     }
-
+    
     useEffect(() => {
        setGenre(activeGenre.join(','))
     }, [activeGenre])
@@ -31,12 +31,12 @@ const Filters: FC = () => {
     useEffect(() => {
         setValue({ ...value, valueGenres: genre })
     }, [genre])
-
+    
     useEffect(() => {
         if (value) {
             dispatch(resetAnime())
             dispatch(fetchPage(undefined))
-            dispatch(getAnime(undefined, value?.valueSort, value?.valueGenres, value?.valueType))
+            dispatch(getAnime(undefined, value?.valueSort, value?.valueGenres, value?.valueType, value?.valueYear))
         }
     }, [value])
 
@@ -50,7 +50,7 @@ const Filters: FC = () => {
                 <h3 className='filters__title'>Фильтры</h3>
                 <form className='filters__genres'>
                     <div className='filters__left'>
-                        <label>
+                        <label className='filters__left-item'>
                             <h5 className='filters__genres-title'>Сортировка по</h5>
                             <select value={value.valueSort} onChange={e => setValue({ ...value, valueSort: e.target.value })} className='filters__sort'>
                                 {
@@ -62,7 +62,7 @@ const Filters: FC = () => {
                                 }
                             </select>
                         </label>
-                        <label>
+                        <label className='filters__left-item'>
                             <h5 className='filters__genres-title'>Тип</h5>
                             <select value={value.valueType} onChange={e => setValue({ ...value, valueType: e.target.value })} className='filters__sort'>
                                 <option value='' className='filters__sort-item'>
@@ -77,8 +77,23 @@ const Filters: FC = () => {
                                 }
                             </select>
                         </label>
+                        <label className='filters__left-item'>
+                            <h5 className='filters__genres-title'>Год</h5>
+                            <select value={value.valueYear} onChange={e => setValue({ ...value, valueYear: e.target.value })} className='filters__sort'>
+                                <option value='' className='filters__sort-item'>
+                                    Год
+                                </option>
+                                {
+                                    filterDataYear.map((item, id) => (
+                                        <option key={id} value={item.value} className='filters__sort-item'>
+                                            {item.value}
+                                        </option>
+                                    ))
+                                }
+                            </select>
+                        </label>
                     </div>
-                    <label>
+                    <label className='filters__genres-content'>
                         <h5 className='filters__genres-title'>Жанры</h5>
                         <div className='filters__genre'>
                             {

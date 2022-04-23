@@ -6,10 +6,10 @@ type SearchProps = {
   valueSearch: string
 }
 const Search: FC<SearchProps> = ({ valueSearch }) => {
-  const [newAnimeSearch, setNewAnimeSearch] = useState<any>([])
+  const [newAnimeSearch, setNewAnimeSearch] = useState<any[]>([])
   const { animeSearch, loadingSearch } = UseAppSelector(state => state.animeSearch)
 
-  useEffect((): any => {
+  useEffect(() => {
     let cityMap: any = new Map();
     animeSearch.forEach(p => cityMap.set(p.worldart_link, p));
     console.log([...cityMap.values()]);
@@ -33,9 +33,9 @@ const Search: FC<SearchProps> = ({ valueSearch }) => {
                   newAnimeSearch.length === 0 ?
                     <h2 className='fff pad'>Попробуйте ввести название аниме по-другому. В случае, если вам все равно не удалось найти нужное вам аниме, напишите мне.</h2>
                     :
-                    newAnimeSearch?.map((item: any) => (
+                    newAnimeSearch?.map((item) => (
                       <Link className='list__card' key={`${item.id}`} to={`/anime/${item.id}`} >
-                        <img className='list__card-img' src={item.material_data?.poster_url} />
+                        <img className='list__card-img' src={item.material_data?.poster_url} alt='anime poster'/>
                         <div className='list__card-content'>
                           <h2 className='list__card-title'>{item.material_data?.anime_title}</h2>
                           <span className='list__card-episodes'>{item.last_season === undefined ? "" : item.last_season + " сезон"} </span>
@@ -51,5 +51,4 @@ const Search: FC<SearchProps> = ({ valueSearch }) => {
     </main>
   )
 }
-// &translation_id=609,739,557,610,643,2068
 export default Search

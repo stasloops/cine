@@ -6,7 +6,7 @@ import './List.scss'
 
 const List: FC = () => {
   const { loading, anime } = UseAppSelector(state => state.anime)
-  const [opacity, setOpacity] = useState(false)
+  const [opacity, setOpacity] = useState<boolean>(false)
   const [newAnime, setNewAnime] = useState<any[]>([])
 
   const onScroll = () => {
@@ -31,12 +31,8 @@ const List: FC = () => {
 
   useEffect(() => {
     let dataMap:any = new Map();
-    anime.forEach((p:any) => dataMap.set(p.worldart_link, p));
+    anime.forEach((p: any) => dataMap.set(p.worldart_link, p));
     setNewAnime([...dataMap.values()])
-    
-    console.log(anime);
-    console.log(newAnime);
-    
   }, [anime])
 
   return (
@@ -51,7 +47,7 @@ const List: FC = () => {
               {
                 newAnime.map((item) => (
                   <Link className='list__card' key={`${item.id}`} to={`/anime/${item.id}`} >
-                    <img className='list__card-img' src={item.material_data?.poster_url} />
+                    <img className='list__card-img' src={item.material_data?.poster_url} alt='anime poster'/>
                     <div className='list__card-content'>
                       <h2 className='list__card-title'>{item.material_data?.anime_title}</h2>
                       <span>

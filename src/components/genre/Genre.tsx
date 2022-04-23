@@ -2,14 +2,14 @@ import React, { FC, useState } from 'react'
 
 type GenreProps = {
     item: any
-    handleGenre: (value: any) => void
+    handleGenre: (value: string) => void
 }
 
 const Genre: FC<GenreProps> = ({item, handleGenre}) => {
 
-    const [active, setActive] = useState(true)
+    const [active, setActive] = useState<boolean>(true)
 
-    const toggleButton = (item: any) => {
+    const toggleButton = (item: string) => {
         setActive(!active)
         handleGenre(item)
     }
