@@ -39,10 +39,10 @@ const Anime: FC = () => {
                                 <div className='anime__genres'><span>Жанры: </span>
                                     <span>
                                         {
-                                            searchAnime.material_data?.anime_genres.map((item: any) => (
-                                                <>
-                                                    <span className='anime__genres-item'>{item}</span><span className='anime__b'>,</span>
-                                                </>
+                                            searchAnime.material_data?.anime_genres.map((item: any, id: number) => (
+                                                <span key={id}>
+                                                    <span  className='anime__genres-item'>{item}</span><span className='anime__b'>,</span>
+                                                </span>
                                             ))
                                         }
                                     </span>
