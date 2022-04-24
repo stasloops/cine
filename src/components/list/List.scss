@@ -199,20 +199,25 @@
             text-align: center;
         }
 
-        &__cards{
+        &__cards {
             justify-content: space-between;
         }
 
-        &__card{
+        &__card {
             width: 49%;
             margin-bottom: 20px;
             align-items: flex-start;
-            &-content{
+
+            &:hover {
+                transform: scale(1);
+            }
+
+            &-content {
                 padding: 10px 5px 0 10px;
             }
         }
 
-        
+
 
         &__card-img {
             width: 100%;
@@ -233,7 +238,7 @@
 
         &__card-title {
             width: 95%;
-            font-size: 18px;
+            font-size: 17px;
         }
     }
 }
