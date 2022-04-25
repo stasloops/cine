@@ -34,7 +34,7 @@ const Anime: FC = () => {
                         <div className='anime__info'>
                             <img className='anime__img' src={searchAnime.material_data?.poster_url} alt='anime poster' />
                             <div className='anime__content'>
-                                <h1 className='anime__title'><span className='cae962'>{searchAnime.material_data?.title}</span> сезон {searchAnime.last_season}</h1>
+                                <h1 className='anime__title'><span className='cae962'>{searchAnime.material_data?.title}</span> <span className='list__card-episodes'>{searchAnime.last_season ? " сезон " + searchAnime?.last_season : ""} </span></h1>
                                 <p className='anime__description'>{searchAnime.material_data?.anime_description}</p>
                                 <div className='anime__genres'><span>Жанры: </span>
                                     <span>
