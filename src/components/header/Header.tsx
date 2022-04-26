@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAppDispatch } from '../../hooks/redux-hooks/redux'
 import { getSearchAnime } from '../../store/reducers/AnimeSearch/AnimeSearchGet'
 import './Header.scss'
+import loop from "../../icons/loop.svg"
 
 type HeaderProps = {
     setValueSearch: (item: string) => void
@@ -36,7 +37,7 @@ const Header: FC<HeaderProps> = ({ setValueSearch }) => {
                     </a>
                     <form className='header__form'>
                         <input value={value} onChange={e => setValue(e.target.value)} placeholder='Поиск аниме' className='header__input' />
-                        <button onClick={onNavigateSearch} className='header__button'><img src='' /></button>
+                        <button onClick={onNavigateSearch} className='header__button'><img src={loop} /></button>
                     </form>
                 </div>
             </div>

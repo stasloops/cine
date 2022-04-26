@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { UseAppSelector } from '../../hooks/redux-hooks/redux'
 import Filters from '../filters/Filters'
 import './List.scss'
+import arrow from "../../icons/arrow.svg"
 
 const List: FC = () => {
   const { loading, anime } = UseAppSelector(state => state.anime)
@@ -37,7 +38,7 @@ const List: FC = () => {
 
   return (
     <main className='list'>
-      <img onClick={onScroll} style={{ display: opacity === false ? 'none' : '' }} className='list__arrow' src='arrow-svgrepo-com.svg' alt='scroll to top' />
+      <img onClick={onScroll} style={{ display: opacity === false ? 'none' : '' }} className='list__arrow' src={arrow} alt='scroll to top' />
       <div className='list__container'>
         <div className='list__inner'>
           <h1 className='list__title'>Список аниме</h1>

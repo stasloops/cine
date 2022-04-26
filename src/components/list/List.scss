@@ -15,13 +15,12 @@
         border-radius: 50px;
         padding: 10px;
         cursor: pointer;
-        transform: rotate(-90deg);
         transition: 1s;
         z-index: 100;
 
         &:hover {
             color: #e5f6b0;
-            transform: translateY(10px) scale(1.05) rotate(-90deg);
+            transform: translateY(10px) scale(1.05);
             transition: 0.4s;
 
         }
