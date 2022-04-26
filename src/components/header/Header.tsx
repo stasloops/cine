@@ -36,7 +36,7 @@ const Header: FC<HeaderProps> = ({ setValueSearch }) => {
                     </a>
                     <form className='header__form'>
                         <input value={value} onChange={e => setValue(e.target.value)} placeholder='Поиск аниме' className='header__input' />
-                        <button onClick={onNavigateSearch} className='header__button'><img src='magnifier-left-svgrepo-com.svg' /></button>
+                        <button onClick={onNavigateSearch} className='header__button'><img src='' /></button>
                     </form>
                 </div>
             </div>
