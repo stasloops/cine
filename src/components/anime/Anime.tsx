@@ -19,10 +19,6 @@ const Anime: FC = () => {
         getAnime()
     }, [id])
 
-    useEffect(() => {
-        console.log(searchAnime);
-    }, [searchAnime])
-
     if (searchAnime.length === 0) {
         return null
     } else {

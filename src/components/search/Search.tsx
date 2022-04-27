@@ -12,7 +12,6 @@ const Search: FC<SearchProps> = ({ valueSearch }) => {
   useEffect(() => {
     let cityMap: any = new Map();
     animeSearch.forEach(p => cityMap.set(p.worldart_link, p));
-    console.log([...cityMap.values()]);
     setNewAnimeSearch([...cityMap.values()])
   }, [animeSearch])
 

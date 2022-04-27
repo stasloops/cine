@@ -10,8 +10,6 @@ export const getSearchAnime = (title = '') => {
             dispatch(fetchAnime(res.data.results))
         } catch (e) {
             dispatch(fetchError(e))
-        } finally {
-            console.log(title);
         }
     }
 }
