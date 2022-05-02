@@ -1,7 +1,7 @@
 .list {
     width: 100%;
     position: relative;
-    top: 60px;
+    top: 120px;
     background-color: #202125;
     min-height: 200vh;
     padding-bottom: 100px;
@@ -30,23 +30,30 @@
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
+
     }
 
     &__inner {
         box-sizing: border-box;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
+        border: 1px solid #cae962;
+        border-width: 2px 2px;
+        border-color: #cae962;
         background-color: #202125;
+        z-index: 2
     }
 
     &__title {
-        margin: 50px 0 0 0;
+        margin: 0px 0 0 0;
         padding: 50px 12px;
         color: #cae962;
         font-size: 42px;
+        z-index: 2;
     }
 
     &__search {
@@ -72,6 +79,9 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        background-color: #202125;
+        z-index: 2;
+
     }
 
     &__card {
@@ -118,6 +128,20 @@
             margin-right: 0px;
         }
     }
+
+    &__jojo-img {
+        width: 800px;
+        top: 100px;
+        left: -100px;
+        position: fixed;
+    }
+
+    &__dio-img {
+        width: 800px;
+        top: 100px;
+        right: -10px;
+        position: fixed;
+    }
 }
 
 .loading {
@@ -127,6 +151,74 @@
 
 .pad {
     padding: 0 10px;
+}
+
+@media screen and (min-width: 2400px) {
+    .list {
+        &__jojo-img {
+            width: 1000px;
+            top: 100px;
+            left: -120px;
+
+        }
+
+        &__dio-img {
+            width: 1050px;
+            top: 100px;
+            right: -120px;
+        }
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    .list {
+        &__jojo-img {
+            width: 700px;
+            top: 100px;
+            left: -100px;
+
+        }
+
+        &__dio-img {
+            width: 720px;
+            top: 100px;
+            right: -100px;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .list {
+        &__jojo-img {
+            width: 500px;
+            top: 100px;
+            left: -120px;
+
+        }
+
+        &__dio-img {
+            width: 530px;
+            top: 100px;
+            right: -120px;
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .list {
+        &__jojo-img {
+            width: 450px;
+            top: 100px;
+            left: -130px;
+
+        }
+
+        &__dio-img {
+            width: 470px;
+            top: 100px;
+            right: -140px;
+        }
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -147,6 +239,19 @@
 
         &__card {
             width: 33.33%;
+        }
+
+        &__jojo-img {
+            width: 400px;
+            top: 100px;
+            left: -130px;
+
+        }
+
+        &__dio-img {
+            width: 410px;
+            top: 100px;
+            right: -140px;
         }
     }
 }
@@ -185,6 +290,41 @@
                 margin: 0;
                 margin-top: 30px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .list {
+        top: 40px;
+        &__jojo-img {
+            width: 350px;
+            top: 100px;
+            left: -130px;
+
+        }
+
+        &__dio-img {
+            width: 360px;
+            top: 100px;
+            right: -125px;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .list {
+        &__inner {
+            border: none;
+        }
+
+        &__jojo-img {
+            display: none;
+
+        }
+
+        &__dio-img {
+            display: none;
         }
     }
 }

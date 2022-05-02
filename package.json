@@ -1,5 +1,6 @@
 {
   "name": "anime-cinema",
+  "homepage":  "https://anijojo.online/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,7 +1,7 @@
-@font-face {
-    font-family: Montserrat;
-    src: url(Montserrat-VariableFont_wght.ttf);
-}
+// @font-face {
+//     font-family: Montserrat;
+//     src: url(Montserrat-VariableFont_wght.ttf);
+// }
 
 .app {
     background-color: #202125;
@@ -10,7 +10,7 @@
     min-height: 100vh;
     z-index: 0;
     position: relative;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     &__back {
         background-color: #20212580;
         width: 100%;

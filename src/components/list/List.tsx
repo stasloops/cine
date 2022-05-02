@@ -31,7 +31,7 @@ const List: FC = () => {
   }
 
   useEffect(() => {
-    let dataMap:any = new Map();
+    let dataMap: any = new Map();
     anime.forEach((p: any) => dataMap.set(p.worldart_link, p));
     setNewAnime([...dataMap.values()])
   }, [anime])
@@ -40,6 +40,7 @@ const List: FC = () => {
     <main className='list'>
       <img onClick={onScroll} style={{ display: opacity === false ? 'none' : '' }} className='list__arrow' src={arrow} alt='scroll to top' />
       <div className='list__container'>
+        <img className='list__jojo-img' src='/img/jojo2.jpg' />
         <div className='list__inner'>
           <h1 className='list__title'>Список аниме</h1>
           <Filters />
@@ -48,7 +49,7 @@ const List: FC = () => {
               {
                 newAnime.map((item) => (
                   <Link className='list__card' key={`${item.id}`} to={`/anime/${item.id}`} >
-                    <img className='list__card-img' src={item.material_data?.poster_url} alt='anime poster'/>
+                    <img className='list__card-img' src={item.material_data?.poster_url} alt='anime poster' />
                     <div className='list__card-content'>
                       <h2 className='list__card-title'>{item.material_data?.anime_title}</h2>
                       <span>
@@ -67,6 +68,7 @@ const List: FC = () => {
             null
           }
         </div>
+        <img className='list__dio-img' src='/img/dio2.jpg' />
       </div>
     </main>
   )
